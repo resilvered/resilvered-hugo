@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Blog | Al&#39;s Ramblings</title>
+<meta name="keywords" content="">
+<meta name="description" content="Automation, UNIX and other assorted random thoughts">
+<meta name="author" content="Alan Chalmers">
+<link rel="canonical" href="http://10.0.0.45:1313/categories/blog/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://10.0.0.45:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://10.0.0.45:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://10.0.0.45:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://10.0.0.45:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://10.0.0.45:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://10.0.0.45:1313/categories/blog/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://10.0.0.45:1313/categories/blog/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://10.0.0.45:1313/categories/blog/">
+  <meta property="og:site_name" content="Al&#39;s Ramblings">
+  <meta property="og:title" content="Blog">
+  <meta property="og:description" content="Automation, UNIX and other assorted random thoughts">
+  <meta property="og:locale" content="en_au">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blog">
+  <meta name="twitter:description" content="Automation, UNIX and other assorted random thoughts">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://10.0.0.45:1313/" accesskey="h" title="Al&#39;s Ramblings (Alt + H)">Al&#39;s Ramblings</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://10.0.0.45:1313/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/categories/">Categories</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+  <h1>
+    Blog
+    <a href="/categories/blog/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to configure ssh public key for XSCF
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>XSCF&gt; showssh -c pubkey -u admin XSCF&gt; setssh -c addpubkey -u admin Please input a public key: ssh-rsaAAAAB3NzaC1yc2EAAAABIwAAAIEAn5DZLAtDtan37waaAPkhU9b40q0CP5HCtqULaI&#43;V0YU/iDpxeu0/RmFRgYSXdbniAr9wBAWn&#43;vOUmwmyZJoIwgqCN88VJoa&#43;U9g34B2WSMsBqIYleMsvQiBStnnkZgNY/OmDrmq1VU10H8QMw0kCmIQ3Nss7CmR0/E/9tJ6&#43;b6E=
+looks like you need a Control D here
+XSCF&gt; showssh -c pubkey -u unixadmin Public key: 1 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAn5DZLAtDtan37waaAPkhU9b40q0CP5HCtqULaI&#43;V0YU/iDpxeu0/RmFRgYSXdbniAr9wBAWn&#43;vOUmwmyZJoIwgqCN88VJoa&#43;U9g34B2WSMsBqIYleMsvQiBStnnkZgNY/OmDrmq1VU10H8QMw0kCmIQ3Nss7CmR0/E/9tJ6&#43;b6E=
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-27 00:00:00 +0000 UTC'>27 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to How to configure ssh public key for XSCF" href="http://10.0.0.45:1313/posts/2010-10-27-how-to-configure-ssh-public-key-for/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">25 Oct Food diary
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Some perhaps useful information to go with what is essentially navel gazing on my part here is a hand Kilojoule and Nutrient Calculator, and some tips for weight loss.
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-26 00:00:00 +0000 UTC'>26 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to 25 Oct Food diary" href="http://10.0.0.45:1313/posts/2010-10-26-25-oct-food-diary/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">26 Oct Food Diary
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Again trying to add some value here to these post, Lunch today was Tuna Pasta Salad I added some pine nuts and as I had some to hand used rocket instead of parsley.
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-26 00:00:00 +0000 UTC'>26 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to 26 Oct Food Diary" href="http://10.0.0.45:1313/posts/2010-10-26-26-oct-food-diary/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Boot camp Session 4
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>First full outdoor session and first 1.5 hour session. Sunday morning and yes I’m sore, although to be honest if you asked me yesterday I thought I would have been worse, but there is always tomorrow :-)
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-23 00:00:00 +0000 UTC'>23 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to Boot camp Session 4" href="http://10.0.0.45:1313/posts/2010-10-23-boot-camp-session-4/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">21/10 Food Diary
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>pre Workout
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-21 00:00:00 +0000 UTC'>21 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to 21/10 Food Diary" href="http://10.0.0.45:1313/posts/2010-10-21-2110-food-diary/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Boot camp Session 2 &amp; 3
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Session 2 of boot camp saw some more testing, this time on the rowing machine. The stats read
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-21 00:00:00 +0000 UTC'>21 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to Boot camp Session 2 & 3" href="http://10.0.0.45:1313/posts/2010-10-21-boot-camp-session-2-3/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">MSOSUG October Meeting
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>So this months MSOSUG meeting had it’s second run at the new venue a pretty good turn out which seems to be consistent. Given the way Oracle has handled the whole OpenSolaris deal I’m a little surprised to be honest.
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-21 00:00:00 +0000 UTC'>21 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to MSOSUG October Meeting" href="http://10.0.0.45:1313/posts/2010-10-21-msosug-october-meeting/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">19/10 Boot camp food diary
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Breakfast
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-19 00:00:00 +0000 UTC'>19 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to 19/10 Boot camp food diary" href="http://10.0.0.45:1313/posts/2010-10-19-1910-boot-camp-food-diary/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Food Diary 18/10
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Boot camp food diaryBreakfast
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-19 00:00:00 +0000 UTC'>19 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to Food Diary 18/10" href="http://10.0.0.45:1313/posts/2010-10-19-food-diary-1810/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Boot camp Day 1
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ergfit boot camp started today. It’s not the first boot camp I have done so I kinda know what I’ve signed up for , I think, different crew so it will know doubt have different challenges.
+</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2010-10-17 00:00:00 +0000 UTC'>17 Oct 2010</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alan Chalmers</span></footer>
+  <a class="entry-link" aria-label="post link to Boot camp Day 1" href="http://10.0.0.45:1313/posts/2010-10-17-boot-camp-day-1/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://10.0.0.45:1313/categories/blog/page/5/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://10.0.0.45:1313/categories/blog/page/7/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://10.0.0.45:1313/">Al&#39;s Ramblings</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

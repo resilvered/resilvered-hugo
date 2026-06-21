@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Al&#39;s Ramblings</title>
+    <link>http://10.0.0.45:1313/tags/</link>
+    <description>Recent content in Tags on Al&#39;s Ramblings</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sun, 21 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://10.0.0.45:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>http://10.0.0.45:1313/tags/ai/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comfyui</title>
+      <link>http://10.0.0.45:1313/tags/comfyui/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/comfyui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cuda</title>
+      <link>http://10.0.0.45:1313/tags/cuda/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/cuda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cycling</title>
+      <link>http://10.0.0.45:1313/tags/cycling/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/cycling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debian</title>
+      <link>http://10.0.0.45:1313/tags/debian/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/debian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drivetrain</title>
+      <link>http://10.0.0.45:1313/tags/drivetrain/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/drivetrain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gear-Ratios</title>
+      <link>http://10.0.0.45:1313/tags/gear-ratios/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/gear-ratios/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://10.0.0.45:1313/tags/linux/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://10.0.0.45:1313/tags/python/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pytorch</title>
+      <link>http://10.0.0.45:1313/tags/pytorch/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shimano</title>
+      <link>http://10.0.0.45:1313/tags/shimano/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/shimano/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sram</title>
+      <link>http://10.0.0.45:1313/tags/sram/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/sram/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stable-Diffusion</title>
+      <link>http://10.0.0.45:1313/tags/stable-diffusion/</link>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/stable-diffusion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bike</title>
+      <link>http://10.0.0.45:1313/tags/bike/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/bike/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crank</title>
+      <link>http://10.0.0.45:1313/tags/crank/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/crank/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gears</title>
+      <link>http://10.0.0.45:1313/tags/gears/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/gears/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ratio</title>
+      <link>http://10.0.0.45:1313/tags/ratio/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ratio/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sub Compact</title>
+      <link>http://10.0.0.45:1313/tags/sub-compact/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/sub-compact/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CentOS</title>
+      <link>http://10.0.0.45:1313/tags/centos/</link>
+      <pubDate>Tue, 26 Aug 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/centos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jekyll</title>
+      <link>http://10.0.0.45:1313/tags/jekyll/</link>
+      <pubDate>Tue, 26 Aug 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hack</title>
+      <link>http://10.0.0.45:1313/tags/hack/</link>
+      <pubDate>Tue, 12 Aug 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/hack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HHVM</title>
+      <link>http://10.0.0.45:1313/tags/hhvm/</link>
+      <pubDate>Tue, 12 Aug 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/hhvm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PHP</title>
+      <link>http://10.0.0.45:1313/tags/php/</link>
+      <pubDate>Tue, 12 Aug 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/php/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://10.0.0.45:1313/tags/blog/</link>
+      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle</title>
+      <link>http://10.0.0.45:1313/tags/oracle/</link>
+      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/oracle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Packer</title>
+      <link>http://10.0.0.45:1313/tags/packer/</link>
+      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/packer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css</title>
+      <link>http://10.0.0.45:1313/tags/css/</link>
+      <pubDate>Sat, 26 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hyde</title>
+      <link>http://10.0.0.45:1313/tags/hyde/</link>
+      <pubDate>Sat, 26 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/hyde/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ansible</title>
+      <link>http://10.0.0.45:1313/tags/ansible/</link>
+      <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ansible/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Configuration Management</title>
+      <link>http://10.0.0.45:1313/tags/configuration-management/</link>
+      <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/configuration-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Podcast</title>
+      <link>http://10.0.0.45:1313/tags/podcast/</link>
+      <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/podcast/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>http://10.0.0.45:1313/tags/windows/</link>
+      <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Work</title>
+      <link>http://10.0.0.45:1313/tags/work/</link>
+      <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/work/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Solaris</title>
+      <link>http://10.0.0.45:1313/tags/solaris/</link>
+      <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/solaris/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Solaris 11</title>
+      <link>http://10.0.0.45:1313/tags/solaris-11/</link>
+      <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/solaris-11/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vagrant</title>
+      <link>http://10.0.0.45:1313/tags/vagrant/</link>
+      <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/vagrant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualbox</title>
+      <link>http://10.0.0.45:1313/tags/virtualbox/</link>
+      <pubDate>Sun, 16 Feb 2014 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IPS</title>
+      <link>http://10.0.0.45:1313/tags/ips/</link>
+      <pubDate>Sun, 30 Sep 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opensolaris</title>
+      <link>http://10.0.0.45:1313/tags/opensolaris/</link>
+      <pubDate>Sun, 30 Sep 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/opensolaris/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Puppet</title>
+      <link>http://10.0.0.45:1313/tags/puppet/</link>
+      <pubDate>Sun, 30 Sep 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/puppet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ruby</title>
+      <link>http://10.0.0.45:1313/tags/ruby/</link>
+      <pubDate>Sun, 30 Sep 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ruby/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kickstart</title>
+      <link>http://10.0.0.45:1313/tags/kickstart/</link>
+      <pubDate>Sat, 21 Jul 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/kickstart/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle VM Manager</title>
+      <link>http://10.0.0.45:1313/tags/oracle-vm-manager/</link>
+      <pubDate>Sat, 21 Jul 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/oracle-vm-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OVM</title>
+      <link>http://10.0.0.45:1313/tags/ovm/</link>
+      <pubDate>Sat, 21 Jul 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ovm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VirtualBox Command Line</title>
+      <link>http://10.0.0.45:1313/tags/virtualbox-command-line/</link>
+      <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/virtualbox-command-line/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SMF</title>
+      <link>http://10.0.0.45:1313/tags/smf/</link>
+      <pubDate>Sun, 24 Jun 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/smf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Libyaml</title>
+      <link>http://10.0.0.45:1313/tags/libyaml/</link>
+      <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/libyaml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sun</title>
+      <link>http://10.0.0.45:1313/tags/sun/</link>
+      <pubDate>Sat, 31 Mar 2012 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/sun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MSOSUG</title>
+      <link>http://10.0.0.45:1313/tags/msosug/</link>
+      <pubDate>Mon, 07 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/msosug/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zfs</title>
+      <link>http://10.0.0.45:1313/tags/zfs/</link>
+      <pubDate>Sat, 10 Sep 2011 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/zfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rant</title>
+      <link>http://10.0.0.45:1313/tags/rant/</link>
+      <pubDate>Sun, 10 Jul 2011 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/rant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bootcamp</title>
+      <link>http://10.0.0.45:1313/tags/bootcamp/</link>
+      <pubDate>Tue, 07 Dec 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/bootcamp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Family</title>
+      <link>http://10.0.0.45:1313/tags/family/</link>
+      <pubDate>Sat, 13 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/family/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Holiday</title>
+      <link>http://10.0.0.45:1313/tags/holiday/</link>
+      <pubDate>Sat, 13 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/holiday/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LISA 2010</title>
+      <link>http://10.0.0.45:1313/tags/lisa-2010/</link>
+      <pubDate>Fri, 12 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/lisa-2010/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vmware</title>
+      <link>http://10.0.0.45:1313/tags/vmware/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/vmware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ergfit</title>
+      <link>http://10.0.0.45:1313/tags/ergfit/</link>
+      <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ergfit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Food Diary</title>
+      <link>http://10.0.0.45:1313/tags/food-diary/</link>
+      <pubDate>Tue, 26 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/food-diary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iscsi</title>
+      <link>http://10.0.0.45:1313/tags/iscsi/</link>
+      <pubDate>Thu, 21 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/iscsi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flexget</title>
+      <link>http://10.0.0.45:1313/tags/flexget/</link>
+      <pubDate>Wed, 13 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/flexget/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openindiana</title>
+      <link>http://10.0.0.45:1313/tags/openindiana/</link>
+      <pubDate>Wed, 13 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/openindiana/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transmission</title>
+      <link>http://10.0.0.45:1313/tags/transmission/</link>
+      <pubDate>Wed, 13 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/transmission/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dropbox</title>
+      <link>http://10.0.0.45:1313/tags/dropbox/</link>
+      <pubDate>Wed, 22 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/dropbox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>http://10.0.0.45:1313/tags/ubuntu/</link>
+      <pubDate>Wed, 22 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wget</title>
+      <link>http://10.0.0.45:1313/tags/wget/</link>
+      <pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/wget/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ppa</title>
+      <link>http://10.0.0.45:1313/tags/ppa/</link>
+      <pubDate>Wed, 08 Sep 2010 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/ppa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Usb</title>
+      <link>http://10.0.0.45:1313/tags/usb/</link>
+      <pubDate>Sun, 29 Nov 2009 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/usb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>X2200</title>
+      <link>http://10.0.0.45:1313/tags/x2200/</link>
+      <pubDate>Sun, 29 Nov 2009 00:00:00 +0000</pubDate>
+      <guid>http://10.0.0.45:1313/tags/x2200/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

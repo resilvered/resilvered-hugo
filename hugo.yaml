@@ -1,0 +1,96 @@
+baseURL: http://10.0.0.45:1313/
+locale: en-au
+title: "Al's Ramblings"
+theme: PaperMod
+enableRobotsTXT: true
+
+paginate: 10
+
+params:
+  env: development
+  description: "Automation, UNIX and other assorted random thoughts"
+  author: Alan Chalmers
+  DateFormat: "2 Jan 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: false
+  ShowWordCount: false
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  hideSummary: false
+  hidemeta: false
+
+  profileMode:
+    enabled: false
+
+  label:
+    text: "Al's Ramblings"
+    icon: ""
+    iconHeight: 35
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/resilvered"
+    - name: twitter
+      url: "https://twitter.com/bigal"
+    - name: rss
+      url: "index.xml"
+
+  mainSections:
+    - posts
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  assets:
+    disableHLJS: true
+
+menu:
+  main:
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
+
+taxonomies:
+  category: categories
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    guessSyntax: true
+    noClasses: false

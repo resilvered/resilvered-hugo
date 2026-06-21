@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Tags | Al&#39;s Ramblings</title>
+<meta name="keywords" content="">
+<meta name="description" content="Automation, UNIX and other assorted random thoughts">
+<meta name="author" content="Alan Chalmers">
+<link rel="canonical" href="http://10.0.0.45:1313/tags/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://10.0.0.45:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://10.0.0.45:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://10.0.0.45:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://10.0.0.45:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://10.0.0.45:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://10.0.0.45:1313/tags/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://10.0.0.45:1313/tags/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://10.0.0.45:1313/tags/">
+  <meta property="og:site_name" content="Al&#39;s Ramblings">
+  <meta property="og:title" content="Tags">
+  <meta property="og:description" content="Automation, UNIX and other assorted random thoughts">
+  <meta property="og:locale" content="en_au">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tags">
+  <meta name="twitter:description" content="Automation, UNIX and other assorted random thoughts">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="http://10.0.0.45:1313/" accesskey="h" title="Al&#39;s Ramblings (Alt + H)">Al&#39;s Ramblings</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="http://10.0.0.45:1313/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/" title="Tags">
+                    <span class="active">Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<header class="page-header">
+    <h1>Tags</h1>
+</header>
+
+<ul class="terms-tags">
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ai/">Ai <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ansible/">Ansible <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/bike/">Bike <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/blog/">Blog <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/bootcamp/">Bootcamp <sup><strong><sup>11</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/centos/">CentOS <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/comfyui/">Comfyui <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/configuration-management/">Configuration Management <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/crank/">Crank <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/css/">Css <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/cuda/">Cuda <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/cycling/">Cycling <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/debian/">Debian <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/drivetrain/">Drivetrain <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/dropbox/">Dropbox <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ergfit/">Ergfit <sup><strong><sup>4</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/family/">Family <sup><strong><sup>14</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/flexget/">Flexget <sup><strong><sup>3</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/food-diary/">Food Diary <sup><strong><sup>4</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/gear-ratios/">Gear-Ratios <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/gears/">Gears <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/hack/">Hack <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/hhvm/">HHVM <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/holiday/">Holiday <sup><strong><sup>11</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/hyde/">Hyde <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ips/">IPS <sup><strong><sup>3</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/iscsi/">Iscsi <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/jekyll/">Jekyll <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/kickstart/">Kickstart <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/libyaml/">Libyaml <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/linux/">Linux <sup><strong><sup>10</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/lisa-2010/">LISA 2010 <sup><strong><sup>6</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/msosug/">MSOSUG <sup><strong><sup>3</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/openindiana/">Openindiana <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/opensolaris/">Opensolaris <sup><strong><sup>10</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/oracle/">Oracle <sup><strong><sup>5</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/oracle-vm-manager/">Oracle VM Manager <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ovm/">OVM <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/packer/">Packer <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/php/">PHP <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/podcast/">Podcast <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ppa/">Ppa <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/puppet/">Puppet <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/python/">Python <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/pytorch/">Pytorch <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/rant/">Rant <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ratio/">Ratio <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ruby/">Ruby <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/shimano/">Shimano <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/smf/">SMF <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/solaris/">Solaris <sup><strong><sup>13</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/solaris-11/">Solaris 11 <sup><strong><sup>11</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/sram/">Sram <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/stable-diffusion/">Stable-Diffusion <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/sub-compact/">Sub Compact <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/sun/">Sun <sup><strong><sup>4</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/transmission/">Transmission <sup><strong><sup>4</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/ubuntu/">Ubuntu <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/usb/">Usb <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/vagrant/">Vagrant <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/virtualbox/">Virtualbox <sup><strong><sup>7</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/virtualbox-command-line/">VirtualBox Command Line <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/vmware/">Vmware <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/wget/">Wget <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/windows/">Windows <sup><strong><sup>2</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/work/">Work <sup><strong><sup>15</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/x2200/">X2200 <sup><strong><sup>1</sup></strong></sup> </a>
+            </li>
+            <li>
+                <a href="http://10.0.0.45:1313/tags/zfs/">Zfs <sup><strong><sup>4</sup></strong></sup> </a>
+            </li>
+</ul>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://10.0.0.45:1313/">Al&#39;s Ramblings</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
