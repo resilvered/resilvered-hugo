@@ -1,4 +1,4 @@
-baseURL: http://10.0.0.45:1313/
+baseURL: https://resilvered.com/
 locale: en-au
 title: "Al's Ramblings"
 theme: PaperMod
@@ -38,6 +38,8 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/resilvered"
+    - name: codeberg
+      url: "https://codeberg.org/BigAl"
     - name: twitter
       url: "https://twitter.com/bigal"
     - name: rss

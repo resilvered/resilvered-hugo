@@ -1,103 +1,73 @@
 ---
-title: "The Debian 13 ComfyUI Gauntlet: How I Got Stable Diffusion Running Without Breaking My System"
+title: "Running ComfyUI on Debian 13"
 date: 2026-06-21T00:00:00+00:00
 draft: false
 categories: [blog]
 tags: [ai, comfyui, debian, stable-diffusion, linux, python, cuda, pytorch]
-description: "What happens when your distro ships Python 3.13, your GPU driver is a year old, and modern AI frameworks want the bleeding edge."
+description: "Getting ComfyUI running on Debian 13 with Python 3.13 and an older NVIDIA driver."
+cover:
+  image: "/images/comfyui-debian-13.svg"
+  alt: "ComfyUI terminal on Debian 13 - RTX 3060, CUDA 12.8, Python 3.12"
 ---
 
-**Or: what happens when your distro ships Python 3.13, your GPU driver is a year old, and modern AI frameworks want the bleeding edge.**
+Debian 13 is out and I did what any sensible person does: installed it on a spare machine, then immediately tried to make it do something it doesn't want to do.
 
----
+Here's the problem in two lines. Debian 13 ships Python 3.13 and NVIDIA driver 550, which tops out at CUDA 12.4. ComfyUI wants PyTorch 2.9+, compiled against CUDA 12.8, which wants driver 570+. That's a gap. And on Debian, the official NVIDIA CUDA repo doesn't support 13 yet anyway. You could hunt down a third-party driver package. You could also jam a fork into a toaster. Both will end badly.
 
-Debian 13 "Trixie" is out. It's fresh, it's stable, and it comes with Python 3.13 as the default. That's great — unless you want to run ComfyUI, the node-based Stable Diffusion workflow tool that's taken the AI art world by storm. Then it's a puzzle box of version conflicts that'll have you questioning your life choices.
+I wrote this because I couldn't find a single source of truth for the whole thing. It's pieced together from NVIDIA's forward-compatibility docs (which aren't exactly on the front page), Debian 13 release notes, and a couple of hours of trial and error. If you've found a better way, genuinely, send it to me.
 
-I just went through this on a machine with an RTX 3060, and I'm writing this so you don't have to burn an afternoon deciphering CUDA compatibility matrices. Here's the gauntlet, and how to clear it.
+I'm running an RTX 3060 with 8GB of VRAM. Nothing exotic. The machine sits in a corner and doesn't complain much. I'd like to keep it that way.
 
-## The stack of doom
+## The approach
 
-Here's what Debian 13 gives you out of the box:
+CUDA has a thing called forward compatibility. A PyTorch build compiled against CUDA 12.8 will run on a system with CUDA 12.4, as long as the driver supports 12.4, which it does, because driver 550 is a CUDA 12.x driver. This isn't a hack. NVIDIA document it. They just don't make a song and dance about it because it undercuts their "please install our repo" sales pitch.
 
-- **Python 3.13** — brand new, shiny, and missing wheels for quite a few packages
-- **NVIDIA driver 550.163.01** — from the standard repos, supports up to CUDA 12.4
-- **No official NVIDIA CUDA repo support for Debian 13 yet**
+So the plan: stick to Debian's own non-free packages, use Python 3.12 instead of 3.13 (fewer missing wheels, less swearing), install PyTorch 2.5.1 as a stepping stone, then let ComfyUI's requirements.txt pull in the newer build. It'll land on PyTorch 2.9.1+cu128 and shrug because the driver's close enough.
 
-Here's what ComfyUI (mid-2026) expects:
+## Steps
 
-- **PyTorch 2.9+** — which wants CUDA 12.8 or 13.0
-- **CUDA 12.8** — which needs NVIDIA driver 570.65+
-- **CUDA 13.0** — which needs driver 580.65+
+### 1. Install UV
 
-See the problem? Debian gives you CUDA 12.4. ComfyUI wants CUDA 12.8. There's a gap, and bridging it with third-party driver repos is how you end up with a system that breaks on the next `apt upgrade`.
-
-## The strategy: meet in the middle
-
-The trick is CUDA's **forward compatibility**. A newer PyTorch compiled against CUDA 12.8 will happily run on a system with CUDA 12.4, as long as the driver supports the older CUDA version. This is documented, it's supported, and it's the key to staying within Debian's stable ecosystem.
-
-The plan:
-
-1. **Use Python 3.12 instead of 3.13** — better ecosystem support, fewer missing wheels
-2. **Install PyTorch 2.5.1+cu124 first** — built against CUDA 12.4, matches your driver
-3. **Let ComfyUI's requirements.txt upgrade PyTorch to 2.9.1+cu128** — forward-compatible with your CUDA 12.4 system
-4. **Enable nvidia-persistenced** — fixes CUDA initialization errors on Linux
-
-## Step by step
-
-### 1. Install UV (the fast Python package manager)
-
-UV is a Rust-based drop-in for pip/venv/pip-tools. It resolves dependencies in seconds instead of minutes and handles Python version management. It's become the standard tool for Python projects in 2025-2026.
+UV is what pip should have been. Rust, fast, doesn't spend 90 seconds resolving dependencies only to bail on a conflict.
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env
-```
-
-Add this to your shell config to make it permanent:
-```bash
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
-### 2. Install Python 3.12 with UV
+### 2. Install Python 3.12
+
+UV manages Python versions without touching your system install. Debian 13's 3.13 stays where it is, doing whatever it does. We bring in 3.12 alongside.
 
 ```bash
 uv python install 3.12
+python3.12 --version
 ```
 
-This pulls down CPython 3.12.12 (or latest 3.12.x) without touching your system Python. Verify:
+### 3. Create the venv
+
+Nuke any old .venv first. Stale environments cause problems you'll chase for an hour before realising you're an idiot. Then let UV build a fresh one.
 
 ```bash
-python3.12 --version   # Python 3.12.12
-```
-
-### 3. Create the ComfyUI virtual environment
-
-```bash
-cd ~/Source/ComfyUI       # clone ComfyUI first if you haven't
-rm -rf .venv               # nuke any existing venv
+cd ~/Source/ComfyUI
+rm -rf .venv
 uv venv --python 3.12 .venv --prompt "Comfy UI"
 source .venv/bin/activate
-```
-
-**Note:** UV's venvs are minimal — pip isn't included by default. Bootstrap it:
-
-```bash
 python -m ensurepip --upgrade
 ```
 
-UV only creates `pip3` and `pip3.12` symlinks, not `pip`. Use `pip3` or `python -m pip` throughout.
+UV's venvs are minimal. No pip by default. The `ensurepip` line bootstraps it. Use `pip3` or `python -m pip` from here on; `pip` alone won't resolve.
 
-### 4. Install PyTorch 2.5.1 with CUDA 12.4
+### 4. Install PyTorch 2.5.1
 
-This is the anchor install. PyTorch 2.5.1+cu124 matches your driver's CUDA 12.4 capability.
+This is the anchor. 2.5.1+cu124 matches your driver's CUDA 12.4 capability. It'll be replaced in the next step, but installing it first means the dependency resolver has a known-good starting point.
 
 ```bash
 pip3 install --upgrade pip
 pip3 install torch==2.5.1+cu124 torchaudio==2.5.1 \
     --extra-index-url https://download.pytorch.org/whl/cu124
 ```
-
-This pulls about 900MB of packages, mostly NVIDIA CUDA libraries. Grab a coffee.
 
 Verify:
 
@@ -107,37 +77,27 @@ print(torch.__version__)     # 2.5.1+cu124
 print(torch.version.cuda)    # 12.4
 ```
 
-### 5. Install ComfyUI dependencies (the upgrade happens here)
+### 5. Install ComfyUI dependencies
 
 ```bash
 pip3 install -r requirements.txt
 ```
 
-This is where the magic happens. `requirements.txt` pulls in PyTorch 2.9.1+cu128, which **replaces** the 2.5.1 you just installed. This is intentional. PyTorch 2.9.1 compiled against CUDA 12.8 will run on your CUDA 12.4 system thanks to forward compatibility.
+This pulls in about 50 packages and upgrades PyTorch to 2.9.1+cu128 in the process. Forward compatibility makes that fine. If you're the type who needs to understand why before trusting it, NVIDIA's docs are here: https://docs.nvidia.com/deploy/cuda-compatibility/#forward-compatibility
 
-You'll also get `torchvision 0.24.1`, `transformers 4.57.3`, `safetensors 0.7.0`, `kornia 0.8.2`, and about 50 other packages.
+### 6. Fix the CUDA init problem
 
-### 6. Fix the CUDA initialization issue
-
-If you try running ComfyUI now, you'll likely see:
-
-```
-RuntimeError: CUDA unknown error - this may be due to an incorrectly set up environment
-```
-
-This is a known Linux quirk. The fix:
+If you skip this, ComfyUI will greet you with `CUDA unknown error` and you'll spend twenty minutes reinstalling things that weren't broken. Don't.
 
 ```bash
 sudo systemctl enable nvidia-persistenced
 sudo systemctl start nvidia-persistenced
-sudo reboot           # this step is NOT optional
+sudo reboot
 ```
 
-`nvidia-persistenced` keeps the NVIDIA kernel module loaded even when no processes are using it. Without it, CUDA initialization at Python startup can fail silently. You **must reboot** — the fix doesn't take effect until the kernel module reloads.
+On Linux the NVIDIA kernel module unloads when nothing's using it. `nvidia-persistenced` pins it open. You must reboot. The module doesn't reload until the next boot cycle.
 
-### 7. Run ComfyUI
-
-After rebooting:
+### 7. Launch
 
 ```bash
 cd ~/Source/ComfyUI
@@ -145,7 +105,7 @@ source .venv/bin/activate
 python main.py --enable-manager
 ```
 
-If everything worked, you'll see:
+If it worked:
 
 ```
 Total VRAM 7966 MB, total RAM 63974 MB
@@ -153,46 +113,22 @@ pytorch version: 2.9.1+cu128
 Device: cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync
 ```
 
-ComfyUI is live at `http://127.0.0.1:8188`.
+ComfyUI is at `http://127.0.0.1:8188`. Close the browser tab you had open on port 7860 from last time. That was Automatic1111. Different thing. We've moved on.
 
-## Why this works
+## Troubleshooting
 
-The whole approach hangs on two insights:
-
-**CUDA forward compatibility is real and documented.** NVIDIA guarantees that applications built against a newer CUDA toolkit run on systems with an older CUDA driver, within the same major version. PyTorch 2.9.1 (CUDA 12.8) on a CUDA 12.4 system with driver 550 — that's within the CUDA 12.x family, so forward compatibility applies.
-
-**You don't need to leave Debian's repos.** No `cuda-repo-debian13.deb`, no manual driver installs, no third-party PPAs. Everything comes from Debian's own `non-free` repository. Your system stays update-safe.
-
-## What you get
-
-With an RTX 3060 (8GB VRAM) and this setup:
-
-- Async weight offloading with 2 streams
-- ~60GB of pinned system memory for overflow
-- Normal VRAM mode (not low-vram, not high-vram)
-- Full GPU acceleration — no CPU fallback, no OOM at 512×512
-
-## Troubleshooting quick reference
-
-| Problem | Likely fix |
-|---------|-----------|
+| Problem | Fix |
+|---------|-----|
 | `pip: command not found` | Use `pip3` or `python -m pip` |
-| PyTorch 2.9 install fails | Don't install it directly. Install 2.5.1 first, then let `requirements.txt` upgrade |
-| `torch.cuda.is_available()` returns `False` | Enable `nvidia-persistenced` and reboot |
-| `CUDA unknown error` | Same as above — persistenced + reboot |
-| Port 8188 already in use | Use `--port 8080` |
-| "PYTORCH_CUDA_ALLOC_CONF is deprecated" | Ignore it — it's a benign warning |
+| PyTorch 2.9 install fails | Install 2.5.1 first, then let requirements.txt upgrade |
+| `torch.cuda.is_available()` is `False` | Enable nvidia-persistenced and reboot |
+| `CUDA unknown error` | Same. Persistenced, then reboot. |
+| Port 8188 in use | `--port 8080` |
 
-## The bigger picture
+## Should you do this?
 
-There's something revealing about this whole exercise. Debian 13 ships with Python 3.13 and NVIDIA driver 550 — both reasonable, stable choices for a general-purpose OS. But the AI/ML ecosystem moves at a pace that leaves stable distros in the dust. PyTorch ships new versions monthly. ComfyUI's `requirements.txt` pins to the latest. The gap between "what your distro ships" and "what the framework wants" is a chasm.
+If you run Debian and want to keep it that way. No third-party driver repos, no PPAs, no "just switch to Arch". Then yes. The whole thing works inside Debian's own package boundaries. Driver 550 from non-free, Python 3.12 via UV, everything else in a venv. Your system stays update-safe and you get ComfyUI at full speed on an RTX 3060.
 
-The solution isn't to abandon stable distros for rolling-release or Arch. It's to understand the compatibility layers — CUDA forward compatibility, UV's Python version management, virtual environments — and use them strategically. You can have both: a stable system *and* the latest AI tools.
+If you've got a newer card or you're on a distro that ships driver 570+, you don't need any of this. Just install PyTorch and go. But if you're sitting on Debian 13 looking at a version gap with that particular "oh for god's sake" feeling, this is your path through.
 
-That's the real lesson from this install. Not "run these 7 commands," but "understand the version dance so you can adapt it next time." Because next time there'll be a Debian 14, a Python 3.14, a CUDA 14.0, and the gap will look different. The principles — forward compatibility, matching CUDA versions to your driver, using UV to isolate Python versions — will still apply.
-
-Happy generating.
-
----
-
-*June 2026 · Debian 13 (Trixie) · ComfyUI · NVIDIA RTX 3060 · Driver 550.163.01*
+*June 2026 · Debian 13 · ComfyUI · RTX 3060 · Driver 550.163.01*
