@@ -1,7 +1,7 @@
 ---
 title: "SRAM 48/33 × 10-36 vs Shimano 50/34 × 11-34: The Gear Range Showdown"
 date: 2026-06-21T00:00:00+00:00
-draft: false
+draft: true
 categories: [blog]
 tags: [cycling, gear-ratios, sram, shimano, drivetrain]
 cover:
