@@ -4,7 +4,8 @@ title: "Al's Ramblings"
 theme: PaperMod
 enableRobotsTXT: true
 
-paginate: 10
+pagination:
+  pagerSize: 10
 
 params:
   env: development
